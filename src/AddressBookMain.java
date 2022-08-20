@@ -24,18 +24,20 @@ public class AddressBookMain {
 		System.out.println("Press 1 for new contact");
 		System.out.println("Press 2 for edit contact");
 		System.out.println("Press 3 for delete contact");
+		System.out.println("Press 4 for show contact");
 
 		int x = scanner.nextInt();
 
 		if (x == 1) {
 			addressBookMethod.newContact();
-			System.out.println(addressBookMethod.list);
 		} else if (x == 2) {
 			addressBookMethod.editContact();
 		} else if (x == 3) {
 			addressBookMethod.deleteContact();
 			System.out.println("Deleted the contact successfully...");
-		} else {
+		} else if (x == 4){
+			System.out.println(addressBookMethod.list);
+		}else {
 			System.out.println("Thanks for using address book program...");
 		}
 		System.out.println(addressBookMethod.list);

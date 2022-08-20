@@ -18,19 +18,19 @@ public class AddressBookMethod {
 	public void newContact() {
 
 		System.out.println("Enter first name");
-		String firstName = sc.nextLine();
+		String firstName = sc.next();
 
 		System.out.println("Enter last name");
-		String lastName = sc.nextLine();
+		String lastName = sc.next();
 
 		System.out.println("Enter address");
-		String address = sc.nextLine();
+		String address = sc.next();
 
 		System.out.println("Enter city");
-		String city = sc.nextLine();
+		String city = sc.next();
 
 		System.out.println("Enter state");
-		String state = sc.nextLine();
+		String state = sc.next();
 
 		System.out.println("Enter zip");
 		long zip = sc.nextLong();
