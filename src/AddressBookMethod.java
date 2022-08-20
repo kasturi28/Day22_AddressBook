@@ -16,7 +16,7 @@ public class AddressBookMethod {
 	ArrayList<Contact> list = new ArrayList<>();
 
 	public void newContact() {
-		
+
 		System.out.println("Enter first name");
 		String firstName = sc.nextLine();
 
@@ -44,15 +44,18 @@ public class AddressBookMethod {
 
 	}
 
+	/**
+	 * Defining editcontact method for edit the contact details vy using if else
+	 * loop taking new inputs from the user and store then in list
+	 */
 	public void editContact() {
 		System.out.println("enter first name to edit the contact ");
-		
+
 		String name = sc.next();
 
-		//for (Contact con : list)
-			for (Contact cThrough : list){
-			
-			if((name).equals(cThrough.getFirstName())) {
+		for (Contact cThrough : list) {
+
+			if ((name).equals(cThrough.getFirstName())) {
 
 				System.out.println("Which detail you want to edit");
 				System.out.println("press 1 for address");
@@ -89,6 +92,23 @@ public class AddressBookMethod {
 			} else {
 				System.out.println(name + " not found in the address-book");
 			}
+		}
+	}
+
+	/**
+	 * Defining deleteContact method for deleting contact from the address book
+	 * printing the updated list accordingly
+	 */
+	public void deleteContact() {
+		System.out.println("Enter first name to delete the contact ");
+		String name2 = sc.next();
+		int index = 0;
+		for (Contact con : list) {
+			if (con.getFirstName().equals(name2)) {
+				list.remove(index);
+				break;
+			}
+			index++;
 		}
 	}
 
